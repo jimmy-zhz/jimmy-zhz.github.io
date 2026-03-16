@@ -11,14 +11,26 @@
             "id": "4dc2daa1fd81d71d",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "images/Pasted image 20260315202337.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260315202337"
+            }
+          },
+          {
+            "id": "124f7fad6248b68e",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques.md",
+                "file": "test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_Deep Learning Techniques"
+              "title": "test"
             }
           }
         ]
@@ -142,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3-DeepLearning/00_深度神经网络/01_激活函数是深度学习的灵魂.md",
+                "file": "images/Pasted image 20260315202337.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_激活函数是深度学习的灵魂 的大纲"
+              "title": "Pasted image 20260315202337 的大纲"
             }
           }
         ],
@@ -156,8 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5,
-    "collapsed": true
+    "width": 312.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,12 +184,20 @@
   },
   "active": "40e04f8cbdb1f2f7",
   "lastOpenFiles": [
+    "images/Pasted image 20260315163457.png",
+    "3-DeepLearning/3.3 卷积神经网络 CNN.md",
+    "images/Pasted image 20260315202337.png",
+    "images/Pasted image 20260315194411.png",
+    "test.md",
+    "未命名 1.base",
+    "未命名.base",
+    "6-NLP/6.1 NLP 入门.md",
+    "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques.md",
     "images/Pasted image 20260309131414.png",
     "images/Pasted image 20260309125439.png",
     "images/Pasted image 20260309125414.png",
     "Pasted image 20260309125432.png",
     "images/Pasted image 20260309131258.png",
-    "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques.md",
     "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques_backup.md",
     "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques_refactored.md",
     "images/Pasted image 20260309101225.png",
@@ -188,12 +207,10 @@
     "3-DeepLearning/3.7 自监督学习.md",
     "10-AIAgents",
     "3-DeepLearning/3.5 Transformer 架构.md",
-    "3-DeepLearning/3.3 卷积神经网络 CNN.md",
     "3-DeepLearning/3.1 神经元和神经网络.md",
     "4-DeepLearningInAction/Keras高阶用法.md",
     "README.md",
     "5-ComputerVision/图像增强.md",
-    "test.md",
     "1-EssentialBasics/机器学习工具最常用命令合集.md",
     "1-EssentialBasics/1.4 机器学习工具.md",
     "1-EssentialBasics/1.1 高等数学.md",
@@ -203,20 +220,13 @@
     "0-Preface/序2 - 学习路线图.md",
     "0-Preface/序1 - 为什么要学AI？.md",
     "2-MachineLearning/01_梯度下降和反向传播/10_正向传播与反向传播.md",
-    "images/chains_rule.jpg",
-    "resources/chains_rule.jpg",
     "3-DeepLearning/00_深度神经网络",
     "2-MachineLearning/2.4 梯度下降和损失函数.md",
     "2-MachineLearning/01_梯度下降和反向传播/12_梯度问题及缓解.md",
-    "2-MachineLearning/01_梯度下降和反向传播/11_梯度下降的种类.md",
     "2-MachineLearning/01_梯度下降和反向传播",
-    "images/Pasted image 20260220194045.png",
     "未命名 2.base",
     "2-MachineLearning/00_机器学习生命周期",
     "2-MachineLearning/机器学习图谱.canvas",
-    "未命名 1.base",
-    "Pasted image 20260220193952.png",
-    "未命名.base",
     "2-MachineLearning/2.5 回归与分类",
     "2-MachineLearning/2.5 回归与分类",
     "3-DeepLearning/深度学习模型分类.canvas",
