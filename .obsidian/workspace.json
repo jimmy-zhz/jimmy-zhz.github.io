@@ -4,23 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "fdffeabdc00c76cf",
+        "id": "784ea48e28f95542",
         "type": "tabs",
         "children": [
           {
-            "id": "4dc2daa1fd81d71d",
+            "id": "72a409c14705fdf2",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/Pasted image 20260315202337.png"
+                "file": "test.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260315202337"
+              "icon": "lucide-file",
+              "title": "test"
             }
           },
           {
-            "id": "124f7fad6248b68e",
+            "id": "b183a1ec72f860f7",
+            "type": "leaf",
+            "state": {
+              "type": "terminal:documentation",
+              "state": {
+                "terminal:documentation": {
+                  "data": "# Terminal for Obsidian [![release](https://img.shields.io/github/v/release/polyipseity/obsidian-terminal)][latest release] [![Obsidian downloads](https://img.shields.io/badge/dynamic/json?logo=Obsidian&color=%238b6cef&label=downloads&query=$[\"terminal\"].downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json)][community plugin] [![Python](https://img.shields.io/badge/Python-≥3.9-gold?labelColor=blue&logo=Python&logoColor=white)][Python]\n\n[Buy Me a Coffee]: https://buymeacoffee.com/polyipseity\n[Buy Me a Coffee/embed]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=polyipseity&button_colour=40DCA5&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00\n[Obsidian]: https://obsidian.md/\n[Python]: https://python.org/downloads/\n[changelog]: https://github.com/polyipseity/obsidian-terminal/blob/main/CHANGELOG.md\n[community plugin]: https://obsidian.md/plugins?id=terminal\n[latest release]: https://github.com/polyipseity/obsidian-terminal/releases/latest\n[repository]: https://github.com/polyipseity/obsidian-terminal\n[trailer]: https://raw.githubusercontent.com/polyipseity/obsidian-terminal/main/assets/trailer.png\n[related]: https://github.com/polyipseity/obsidian-monorepo\n\nIntegrate consoles, shells, and terminals inside [Obsidian].\n\n[![Buy Me a Coffee/embed]][Buy Me a Coffee]\n\n__[Repository] · [Changelog] · [Community plugin] · [Related] · [Features](#features) · [Installation](#installation) · [Usage](#usage) · [Contributing](#contributing) · [Security](#security)__\n\n![Trailer]\n\nFor first time users, read the [installation](#installation) section first!\n\nThis file is automatically opened on first install. You can reopen it in settings or command palette.\n\n## Features\n\n- Start external terminals from Obsidian.\n- Integrate terminals into Obsidian.\n- Has an emulated developer console usable on all platforms.\n- Supports multiple terminal profiles.\n- Has built-in keyboard shortcuts.\n- Automatically save and restore integrated terminal history.\n- Find in terminal.\n- Save terminal history as file.\n- Customize terminal appearance.\n\n## Installation\n\n1. Install plugin.\n    - Community plugins\n        1. Install the [plugin][community plugin] from community plugins directly.\n    - Manual\n        1. Create directory `terminal` under `.obsidian/plugins` of your vault.\n        2. Place `manifest.json`, `main.js`, and `styles.css` from the [latest release] into the directory.\n    - Building (rolling)\n        1. Clone this repository, including its submodules.\n        2. Install `pnpm` (preferred) or `npm`. See <https://pnpm.io/installation> for pnpm.\n        3. Run `pnpm install` in the root directory (`npm install` is an acceptable fallback).\n        4. Run `pnpm obsidian:install <vault directory>` in the root directory (`npm run obsidian:install <vault directory>` is an acceptable fallback).\n    - [Obsidian42 - BRAT](https://obsidian.md/plugins?id=obsidian42-brat) (rolling)\n        - See [their readme](https://github.com/TfTHacker/obsidian42-brat#readme).\n2. (optional for Windows, recommended) Install Python and dependencies.\n    1. Install [Python] 3.9 or above.\n    2. (Windows only) Run `pip3 install psutil==5.9.5 pywinctl==0.0.50 typing_extensions==4.7.1`. <!-- Update `README.md`, `dependabot.yml`, `magic.ts`, and `pyproject.toml` together. -->\n    3. Configure Python executable in profile settings. Press the \"Check\" button to validate the Python configuration. Each profile needs to be configured separately.\n3. Enable plugin.\n4. (optional) Configure plugin settings.\n\n## Usage\n\n- To start a new external or integrated terminal\n  - Ribbon\n      1. Click on the `Open terminal` ribbon.\n      2. Opens the default terminal if you have set up one. Otherwise, choose the desired profile.\n  - Context menu\n      1. Right-click on files, folders, or tab headers.\n      2. Choose the desired action \\(and profile\\).\n  - Command palette\n      1. Press `Ctrl`+`P` or click on the `Open command palette` ribbon next to the left window border.\n      2. Choose the desired action \\(and profile\\).\n  - Select profile modal\n      1. Choose the desired profile. Press `Ctrl` to edit the profile before use. The item `(Temporary profile)` starts a terminal with a temporary profile.\n- To save and restore integrated terminal history\n    1. Keep the terminal open when exiting Obsidian.\n    2. Terminal history will be restored next time Obsidian is opened.\n- Additional actions\n  - Includes\n    - Clear terminal: \\(1\\), \\(4\\)\n    - Copy terminal: \\(1\\)\n    - Edit terminal: \\(1\\)\n    - Export, import, or edit settings: \\(2\\), \\(3\\)\n    - Find in terminal: \\(1\\), \\(4\\)\n    - Open documentation: \\(2\\), \\(3\\)\n    - Restart terminal: \\(1\\)\n    - Save terminal history: \\(1\\)\n  - Available by\n    - \\(1\\) Right-click on tab header/`More options`\n    - \\(2\\) Open settings\n    - \\(3\\) Open command palette\n    - \\(4\\) Use keyboard shortcuts\n\n### Keyboard shortcuts\n\nThe keyboard shortcuts can be customized in hotkeys settings.\n\n<!-- markdownlint-disable-next-line MD036 -->\n__Global__\n\n- Toggle focus on last terminal: `Ctrl`+`Shift`+`` ` ``\n  - Focus on last terminal: \\(unbound; useful if you want separate keys for focus and unfocus\\)\n\n<!-- markdownlint-disable-next-line MD036 -->\n__Terminal is focused__\n\nWhen a terminal is focused, other keyboard shortcuts \\(including Obsidian and plugin hotkeys\\) are disabled. Only the following keyboard shortcuts work. Thus you can ignore Obsidian complaining about conflicting keys for the following keyboard shortcuts.\n\n- Clear terminal: `Ctrl`+`Shift`+`K`, `Command`+`Shift`+`K` \\(Apple\\)\n- Close terminal: `Ctrl`+`Shift`+`W`, `Command`+`Shift`+`W` \\(Apple\\)\n- Find in terminal: `Ctrl`+`Shift`+`F`, `Command`+`Shift`+`F` \\(Apple\\)\n- Toggle focus on last terminal: `Ctrl`+`Shift`+`` ` `` \\(same as above\\)\n  - Unfocus terminal: \\(unbound; useful if you want separate keys for focus and unfocus\\)\n\n### Theming\n\nTheming is possible. However, there is no user-friendly interface for now.\n\n1. Open the profile editing modal.\n2. Click on the `Edit` button labeled `Data`. It should open up a new modal in which there is a large textbox.\n3. Notice `terminalOptions` in the text area labeled `Data`. Refer to the [`xterm.js` documentation](https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts#L26) (`ITerminalOptions`) to set the options. Nested objects may need to be used.\n   - You can also configure global defaults via the plugin settings page (see `Profile defaults`). Those options act as a fallback for every profile unless a profile explicitly overrides them.\n4. Save the profile. Changes should apply immediately.\n\n### Profiles\n\nThis plugin comes with several profile presets that you can reference.\n\nWhen setting up a terminal profile, you need to distinguish between shells and terminal emulators. (Search online if needed.) Generally, integrated profiles only work with shells while external ones only work with terminal emulators.\n\n#### Examples\n\n<!-- markdownlint-disable-next-line MD036 -->\n__Shells__\n\n- Bash: `bash --login`\n- Bourne shell: `sh`\n- Command Prompt: `cmd`\n- Dash: `dash`\n- Git Bash: `<Git installation>\\bin\\bash.exe --login` (e.g. `C:\\Program Files\\Git\\bin\\bash.exe`)\n- PowerShell Core: `pwsh`\n- Windows PowerShell: `powershell`\n- Windows Subsystem for Linux: `wsl` or `wsl -d <distribution name>`\n- Z shell: `zsh --login`\n\n<!-- markdownlint-disable-next-line MD036 -->\n__Terminal emulators__\n\n- Command Prompt: `cmd`\n- GNOME Terminal: `gnome-terminal`\n- Konsole: `konsole`\n- Terminal (macOS): `/System/Applications/Utilities/Terminal.app/Contents/macOS/Terminal \"$PWD\"`\n- Windows Terminal: `wt`\n- iTerm2: `/Applications/iTerm.app/Contents/MacOS/iTerm2 \"$PWD\"`\n- xterm: `xterm`\n\n### Miscellaneous\n\nThis plugin patches `require` so that `require(\"obsidian\")` and other Obsidian modules work in the developer console. It is toggleable as `Expose internal modules` in settings.\n\nIn the developer console, a context variable `$$` is passed into the code, which can be used to dynamically change terminal options.\n\nThe full API is available from [`src/@types/obsidian-terminal.ts`](src/%40types/obsidian-terminal.ts).\n\n### Troubleshooting\n\n- Is the plugin useful on mobile?\n  - Compared to on desktop, it is much less useful. The only use for it for now is opening a developer console on mobile.\n- Why do hotkeys not work?\n  - If the terminal is in focus, all Obsidian hotkeys are disabled so that you can type special characters into the terminal. You can unfocus the terminal by pressing `Ctrl`+`Shift`+`` ` ``, then you can use Obsidian hotkeys again.\n\n## Contributing\n\nContributions are welcome!\n\n### Changesets\n\nThis project uses [`changesets`](https://github.com/changesets/changesets) to manage the changelog. When creating a pull request, please [add a changeset](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md#adding-changesets) describing the changes. Add multiple changesets if your pull request changes several things. End each changeset with `([PR number](PR link) by [author username](author link))`. For example, the newly created file under the directory `.changeset` should look like:\n\n```Markdown\n---\n\"example\": patch\n---\n\nThis is an example change. ([GH#1](https://github.com/ghost/example/pull/1) by [@ghost](https://github.com/ghost))\n```\n\n### Linting, Commit, and Hooks\n\nThis project uses the following tools to ensure code and commit quality:\n\n- __ESLint__: Linting for TypeScript/JavaScript. Run with `pnpm run check` (lint only) or `pnpm run fix` (auto-fix lint issues).\n- __Prettier__: Code formatting. Run with `pnpm run format` (format all files) or `pnpm run format:check` (check formatting only).\n- __markdownlint__: Lints Markdown files. Run with `pnpm run markdownlint` or auto-fix with `pnpm run markdownlint:fix`.\n- __commitlint__: Enforces conventional commit messages. Used automatically on commit via Husky.\n- __husky__: Manages Git hooks. Pre-commit runs `lint-staged` and pre-push runs commitlint.\n- __lint-staged__: Runs linters on staged files. Markdown files are auto-fixed before commit.\n\n> __Lint-staged note:__ The lint-staged configuration (`.lintstagedrc.mjs`) invokes formatter/linter binaries directly (for example `prettier --write`, `eslint --cache --fix`, `markdownlint-cli2 --fix`) so that the list of staged files is passed through to the tool. Invoking these via `npm run` would prevent lint-staged from forwarding filenames and cause the tool to operate on its default glob (or the entire repo). Use `pnpm run format` to format the entire repository when needed.\n\nTo set up locally:\n\n1. Run `pnpm install` to install dependencies and set up hooks.\n2. On commit, staged Markdown files will be linted and auto-fixed.\n3. Commit messages are checked for conventional format.\n\nYou can manually run:\n\n- `pnpm run check` — lint all code (no formatting)\n- `pnpm run fix` — auto-fix lint issues (no formatting)\n- `pnpm run format` — format all code with Prettier\n- `pnpm run format:check` — check formatting with Prettier\n- `pnpm run markdownlint` — check all Markdown files\n- `pnpm run markdownlint:fix` — auto-fix Markdown files\n- `pnpm run commitlint` — check commit messages in range\n\nConfiguration files:\n\n- `.eslintrc.*` or `eslint.config.mjs` — ESLint rules\n- `.prettierrc` — Prettier rules\n- `.prettierignore` — Prettier ignore patterns\n- `.markdownlint.jsonc` — markdownlint rules\n- `.commitlintrc.js` — commitlint config\n- `.husky/` — Git hooks\n\n### Testing\n\nThis repository uses __Vitest__ for fast unit tests. Tests live under `tests/` and should be named `*.spec.ts` or `*.spec.js`.\n\n- Run locally (non-interactive, coverage): `pnpm test` or `npm run test` (runs `vitest run --coverage`).\n- Run locally (interactive / watch): `pnpm run test:watch` or `npm run test:watch`.\n- Git hooks: The pre-push hook runs `npm run test` (see `.husky/pre-push`) and will block pushes if tests fail; using `pnpm test` locally is equivalent.\n\nSee `vitest.config.mts` for minimal config and further instructions.\n\n### Todos\n\nThe todos here, ordered alphabetically, are things planned for the plugin. There are no guarantees that they will be completed. However, we are likely to accept contributions for them.\n\n- Connect to remote shells.\n- Detect sandboxed environment and notify users.\n- External link confirmation.\n- Filter console log by severity in the developer console.\n- Indicate that the terminal resizer has crashed or is disabled.\n- Shared terminal tabs.\n- Vim mode switch.\n\n### Translating\n\nSee [`assets/locales/README.md`](assets/locales/README.md).\n\n## Security\n\nWe hope that there will never be any security vulnerabilities, but unfortunately it does happen. Please [report](#reporting-a-vulnerability) them!\n\n### Supported versions\n\n| Version  | Supported |\n| -------- | --------- |\n| rolling  | ✅        |\n| latest   | ✅        |\n| outdated | ❌        |\n\n### Reporting a vulnerability\n\nPlease report a vulnerability by opening an new issue. We will get back to you as soon as possible.\n",
+                  "displayTextI18nKey": "translation:generic.documentations.readme",
+                  "iconI18nKey": "asset:generic.documentations.readme-icon"
+                }
+              },
+              "icon": "file-question",
+              "title": "Readme"
+            }
+          },
+          {
+            "id": "b530caf99ba05864",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,7 +51,8 @@
               "title": "test"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -154,13 +173,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "images/Pasted image 20260315202337.png",
+                "file": "test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Pasted image 20260315202337 的大纲"
+              "title": "test 的大纲"
             }
           }
         ],
@@ -168,7 +187,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5
+    "width": 312.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,20 +199,38 @@
       "daily-notes:打开/创建今天的日记": true,
       "templates:插入模板": true,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "40e04f8cbdb1f2f7",
+  "active": "b530caf99ba05864",
   "lastOpenFiles": [
-    "images/Pasted image 20260315163457.png",
+    "test.md",
+    "2-MachineLearning/00_机器学习生命周期/01_业务理解.md",
+    "4-DeepLearningInAction/PyTorch-02-Data Handling.md",
+    "4-DeepLearningInAction/Tensorflow 和 Keras 入门实战.md",
+    "4-DeepLearningInAction/PyTorch-01-入门.md",
+    "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques.md",
+    "3-DeepLearning/00_深度神经网络/01_激活函数是深度学习的灵魂.md",
+    "2-MachineLearning/01_梯度下降和反向传播/10_正向传播与反向传播.md",
+    "2-MachineLearning/01_梯度下降和反向传播/12_梯度问题及缓解.md",
+    "2-MachineLearning/01_梯度下降和反向传播/11_梯度下降的种类.md",
+    "2-MachineLearning/00_机器学习生命周期/02_EDA阶段的数据处理.md",
+    "2-MachineLearning/00_机器学习生命周期/03_数据准备.md",
+    "2-MachineLearning/00_机器学习生命周期/04_特征工程.md",
+    "2-MachineLearning/00_机器学习生命周期/05_建模与评估.md",
+    "2-MachineLearning/00_机器学习生命周期/00_机器学习生命周期.md",
+    "9-RecommendSystem/推荐系统.md",
+    "6-NLP/6.1 NLP 入门.md",
+    "3-DeepLearning/3.6 Autoencoder, AE.md",
+    "3-DeepLearning/3.5 Transformer 架构.md",
+    "3-DeepLearning/3.4 循环神经网络 RNN.md",
     "3-DeepLearning/3.3 卷积神经网络 CNN.md",
     "images/Pasted image 20260315202337.png",
+    "images/Pasted image 20260315163457.png",
     "images/Pasted image 20260315194411.png",
-    "test.md",
     "未命名 1.base",
     "未命名.base",
-    "6-NLP/6.1 NLP 入门.md",
-    "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques.md",
     "images/Pasted image 20260309131414.png",
     "images/Pasted image 20260309125439.png",
     "images/Pasted image 20260309125414.png",
@@ -202,27 +240,11 @@
     "3-DeepLearning/00_深度神经网络/02_Deep Learning Techniques_refactored.md",
     "images/Pasted image 20260309101225.png",
     "Pasted image 20260309101146.png",
-    "3-DeepLearning/00_深度神经网络/01_激活函数是深度学习的灵魂.md",
     "10-AIAgents/AI 智能体编排（Agentic Workflow）.md",
     "3-DeepLearning/3.7 自监督学习.md",
     "10-AIAgents",
-    "3-DeepLearning/3.5 Transformer 架构.md",
     "3-DeepLearning/3.1 神经元和神经网络.md",
-    "4-DeepLearningInAction/Keras高阶用法.md",
-    "README.md",
-    "5-ComputerVision/图像增强.md",
-    "1-EssentialBasics/机器学习工具最常用命令合集.md",
-    "1-EssentialBasics/1.4 机器学习工具.md",
-    "1-EssentialBasics/1.1 高等数学.md",
-    "1-EssentialBasics/1.2 线性代数.md",
-    "1-EssentialBasics/1.3 概率论与数理统计.md",
-    "1-EssentialBasics/1.5 信息论基础 (信息熵、KL散度).md",
-    "0-Preface/序2 - 学习路线图.md",
-    "0-Preface/序1 - 为什么要学AI？.md",
-    "2-MachineLearning/01_梯度下降和反向传播/10_正向传播与反向传播.md",
     "3-DeepLearning/00_深度神经网络",
-    "2-MachineLearning/2.4 梯度下降和损失函数.md",
-    "2-MachineLearning/01_梯度下降和反向传播/12_梯度问题及缓解.md",
     "2-MachineLearning/01_梯度下降和反向传播",
     "未命名 2.base",
     "2-MachineLearning/00_机器学习生命周期",
