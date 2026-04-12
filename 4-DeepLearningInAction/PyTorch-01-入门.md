@@ -19,11 +19,11 @@
 
 更多PyTorch张量操作命令查阅 --> [[机器学习工具最常用命令合集#PyTorch 张量操作]]
 
-[PyTorch-入门-张量](https://github.com/jimmy-pink/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-%E5%BC%A0%E9%87%8F.ipynb)
+[PyTorch-入门-张量](https://github.com/jimmy-zhz/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-%E5%BC%A0%E9%87%8F.ipynb)
 
 ### 自动求导
 
-[PyTorch-入门-自动求导](https://github.com/jimmy-pink/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E7%AD%89.ipynb)
+[PyTorch-入门-自动求导](https://github.com/jimmy-zhz/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E7%AD%89.ipynb)
 - 自动求导
 - 求偏导数
 ```python
@@ -36,7 +36,7 @@ print(x.grad.tolist()) # 输出: tensor(6.) (因为 x=3, 2*3=6)
 ```
 
 ### Dataset
-[PyTorch-入门-Dataset](https://github.com/jimmy-pink/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-Dataset.ipynb)
+[PyTorch-入门-Dataset](https://github.com/jimmy-zhz/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-Dataset.ipynb)
 
 - 内置Dataset
 - 自定义Dataset
@@ -45,7 +45,7 @@ print(x.grad.tolist()) # 输出: tensor(6.) (因为 x=3, 2*3=6)
 
 ### 线性回归
 
-https://github.com/jimmy-pink/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-Regression.ipynb
+https://github.com/jimmy-zhz/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-Regression.ipynb
 
 - 简单线性回归
 	- 公式：$y = wx + b$

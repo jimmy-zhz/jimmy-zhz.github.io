@@ -6,8 +6,8 @@
 
 史上最全面的AI学习手册，面向**普通白领、程序员、创业者**及**业余AI学习爱好者**。
 
-[🔗 访问 GitHub Pages](https://jimmy-pink.github.io)  
-[🔗 访问 GitHub Repo](https://github.com/jimmy-pink/jimmy-pink.github.io)
+[🔗 访问 GitHub Pages](https://jimmy-zhz.github.io)  
+[🔗 访问 GitHub Repo](https://github.com/jimmy-zhz/jimmy-zhz.github.io)
 
 <h1 style="
   text-align: center;
@@ -111,5 +111,5 @@
 
 ---
 
-如果你喜欢这份知识库，欢迎 [⭐Star支持](https://github.com/jimmy-pink/jimmy-pink.github.io)！  
+如果你喜欢这份知识库，欢迎 [⭐Star支持](https://github.com/jimmy-zhz/jimmy-zhz.github.io)！  
 你的支持，是我持续更新的最大动力！🚀

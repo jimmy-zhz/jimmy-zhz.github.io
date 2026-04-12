@@ -285,7 +285,7 @@ a type of supervised learning model
 	- multiple nonlinear regression
 
 #### Simple Linear Regression
-<font style="background:#F6E1AC;color:#664900">🌰 DEMO </font>[ ✍️ SimpleLinearRegression](https://github.com/jimmy-pink/colab-playground/blob/main/1traditional-ml/IBM-1-2-1-SimpleLinearRegression.ipynb)
+<font style="background:#F6E1AC;color:#664900">🌰 DEMO </font>[ ✍️ SimpleLinearRegression](https://github.com/jimmy-zhz/colab-playground/blob/main/1traditional-ml/IBM-1-2-1-SimpleLinearRegression.ipynb)
 ![[regression-line-and-plane.png]]
 predict a continuous value
 - the Best Fit
@@ -302,7 +302,7 @@ $$\text{SSR} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 - accuracy can be greatly reduced by outliers
 
 #### Multiple Linear Regression
-[MultipleLinearRegression-Jupyter Lab](https://github.com/jimmy-pink/colab-playground/blob/main/1traditional-ml/IBM-1-2-2-MultipleLinearRegression.ipynb)
+[MultipleLinearRegression-Jupyter Lab](https://github.com/jimmy-zhz/colab-playground/blob/main/1traditional-ml/IBM-1-2-2-MultipleLinearRegression.ipynb)
 
 
 Features:

@@ -4,8 +4,8 @@
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Insert templated content using Mustache syntax with parameters.",
-	"author": "Jimmy Pink",
-	"authorUrl": "https://github.com/jimmy-pink",
+	"author": "Jimmy",
+	"authorUrl": "https://github.com/jimmy-zhz",
 	"fundingUrl": "",
 	"isDesktopOnly": false
 }

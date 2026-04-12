@@ -164,7 +164,7 @@ Sarcasm 新闻标题讽刺检测
 	- 子词分词
 - 模型选择
 	- FNN
-[✍️ Github-NLP-Sarcasm-FNN](https://github.com/jimmy-pink/colab-playground/blob/main/coursera-lab/nlp-sarcasm-fnn.ipynb)
+[✍️ Github-NLP-Sarcasm-FNN](https://github.com/jimmy-zhz/colab-playground/blob/main/coursera-lab/nlp-sarcasm-fnn.ipynb)
 
 ```python
 from keras import Sequential, Input, layers 
@@ -289,7 +289,7 @@ test_loss, test_accuracy = model.evaluate(test_images, test_labels, verbose=0)
 	- 双层LSTM
 
 🌰 **imdb_reviews 影评情感分析**  
-[✍️ Github-imdb_reviews-rnn](https://github.com/jimmy-pink/colab-machinelearning-playground/blob/main/tensorflow/nlp-imdb_reviews-rnn.ipynb)
+[✍️ Github-imdb_reviews-rnn](https://github.com/jimmy-zhz/colab-machinelearning-playground/blob/main/tensorflow/nlp-imdb_reviews-rnn.ipynb)
 
 ```python
 # Build the model

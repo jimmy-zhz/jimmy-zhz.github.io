@@ -146,7 +146,7 @@ class SidebarGenerator:
         # Add all other entries
         sidebar_md.extend(sidebar)
         navbar_md.extend(navbar)
-        navbar_md.append('* [GitHub](https://github.com/jimmy-pink/jimmy-pink.github.io)')
+        navbar_md.append('* [GitHub](https://github.com/jimmy-zhz/jimmy-zhz.github.io)')
         return "\n".join(sidebar_md), "\n".join(navbar_md)
 
     def save(self):
