@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-DeepLearning/3.5 Transformer 架构.md",
+                "file": "1-EssentialBasics/应用统计/Data Distribution 数据分布.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.5 Transformer 架构"
+              "title": "Data Distribution 数据分布"
             }
           }
         ]
@@ -183,10 +183,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "40e04f8cbdb1f2f7",
+  "active": "2c166f638fc0e172",
   "lastOpenFiles": [
-    "test.md",
     "3-DeepLearning/3.5 Transformer 架构.md",
+    "test.md",
     "3-DeepLearning/3.3 卷积神经网络 CNN.md",
     "3-DeepLearning/3.4 循环神经网络 RNN.md",
     "images/Pasted image 20260504141643.png",
