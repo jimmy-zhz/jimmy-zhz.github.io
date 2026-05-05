@@ -2,20 +2,70 @@
 <h1 style=" text-align: center; font-size: 3em; font-family: 'Georgia', serif; color: #2c3e50; margin: 0.5em 0; padding: 10px 0; border-top: 4px solid #3498db; border-bottom: 4px solid #3498db; text-transform: uppercase; letter-spacing: 3px;">PyTorch入门</h1>
 
 
-### 🎯 学习目标 ：
-- 熟练掌握PyTorch张量常用操作
-- 学会使用PyTorch自动求导
-- 学会使用Dataset加载和预处理数据集
-- 学会使用PyTorch解决**线性回归 和 逻辑回归**问题
+- ### 🎯 学习目标 ：
+-  [[#2. PyTorch优势]]
+	-  [[#模型训练（Training Loop）的核心流程]]
+	- [[#为什么用Keras和PyTorch？]]
+- [[#2. PyTorch入门基础]]
+	- 熟练掌握PyTorch[[#张量及常用操作]]
+	- 学会使用PyTorch[[#自动求导]]
+	- 学会使用[[#Dataset]]加载和预处理数据集
+	- 学会使用PyTorch解决[[#线性回归和逻辑回归]]问题
+
+## 1. PyTorch优势
+
+### 模型训练（Training Loop）的核心流程
+![[Pasted image 20260502095950.png]]
+- `inputs, labels = inputs.to(device), labels.to(device)`
+- `optimizer.zero_grad()`
+- `outputs = model(inputs)`
+- `loss = criterion(outputs, labels)`
+- `loss.backward()`
+- `optimizer.step()`
+
+#### 为什么用Keras和PyTorch？
+
+**Why use frameworks？**
+
+1. **效率提升 (Productivity)**
+    
+    **处理底层复杂操作**：框架负责处理底层的张量运算（Tensor operations）、梯度计算（Gradient calculations）以及 GPU 的显存管理。
+    
+2. **性能保障 (Performance)**
+    
+    框架自带针对硬件（如英伟达 GPU）深度优化的算子，能确保模型运行速度达到工业级标准，远超手写代码。
+    
+    开发者能够专注于模型架构的设计和实验，而不必亲自编写复杂的反向传播（Back propagation）数学公式。
+    
+    **嵌入优化 Embedding Optimization**
+    
+    - Efficient GPU Kernels 高效GPU内核
+    - Automatic Differentiation 自动识别
+    - Mixed-precision arithmetic 混合计算
+3. **降低门槛 (Accessibility)**
+    
+    提供了高层的 API（如 Keras 的 `model.fit`），让不具备深厚数学底层的开发者也能构建出高准确率和鲁棒性的卷积神经网络。
+
+### 客观评价 Keras 和 PyTorch 的优劣。
+
+|**特性**|**Keras (TensorFlow)**|**PyTorch**|
+|---|---|---|
+|**定位**|高层 API，适合快速原型开发。|低层接口，提供粒度更细的控制。|
+|**代码量**|极简，模板代码少。|相对较多，需手动管理梯度步骤。|
+|**数据加载**|使用 `tf.data.dataset` 自动遍历目录。|两部分设计：`Dataset` 对象 + `DataLoader`。|
+|**数据增强**|预处理层（Layers）或 `ImageDataGenerator`。|`torchvision.transforms` 模块。|
+|**训练循环**|自动化，调用 `model.fit` 即可。|**必须显式编写**（手动前向传播、算损失、反向传播）。|
+|**模型定义**|常用 Sequential API（序列模型）。|需继承 `nn.Module` 类。|
 
 
-### 神经网络和张量
+## 2. PyTorch入门基础
+### 张量及常用操作
 ![[nn and tensor.png]]
 
 神经网络的输入和输出都是张量， 网络本身是一组参数组成，这些参数也是张量
 ![[image as tensor.png]]
 
-### 张量操作
+####  张量操作
 
 更多PyTorch张量操作命令查阅 --> [[机器学习工具最常用命令合集#PyTorch 张量操作]]
 
@@ -43,7 +93,7 @@ print(x.grad.tolist()) # 输出: tensor(6.) (因为 x=3, 2*3=6)
 - 数据transform，数据增强
 
 
-### 线性回归
+### 线性回归和逻辑回归
 
 https://github.com/jimmy-zhz/colab-playground/blob/main/3pytorch/PyTorch-%E5%85%A5%E9%97%A8-Regression.ipynb
 
@@ -118,8 +168,12 @@ for i, x in enumerate(X_test):
 	- 举例：以体重秤为例，测量值x1为压力感应值，x2=生物电阻抗值，目标值y1=体重，y2=体脂 y3=血糖  ，则权重w1=$[w_\text{(0,0),} w_\text{(0,1)}],b_0$影响y1的计算, w2=$[w_\text{(1,0),} w_\text{(1,1)}], b_1$影响y2值，w3=$[w_\text{(2,0),} w_\text{(2,1)}], b_2$影响y3的计算。
 - Linear Classifier
 > 思考：线性回归如何解决二分类问题？优缺点是什么？
-> 如：使用历年MPNP申请者数据：海外工作年限w1，雅思成绩w2, 居住时间w3,训练模型，训练线性回归模型，用于给新的申请人模拟打分，评估通过率。$$P = \text{Sigmoid}(w_1x_1 + w_2x_2 + w_3x_3 + b)$$
+> 如：使用历年MPNP申请者数据：海外工作年限w1，雅思成绩w2, 居住时间w3,训练模型，训练线性回归模型，用于给新的申请人模拟打分，评估通过率。
+
+$$P = \text{Sigmoid}(w_1x_1 + w_2x_2 + w_3x_3 + b)$$
 - [[2.5 回归和分类#逻辑回归 (Logistic Regression)|逻辑回归]]
 	- 是 线性函数 + 激活函数 组成
 	- 二分类使用Sigmoid作为激活函数，多分类使用softmax，也称为Logistic Function
-	
+
+
+

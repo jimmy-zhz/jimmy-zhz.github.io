@@ -9,3 +9,5 @@
 
 .obsidian/plugins/copilot/data.json
 /test.md
+
+./*.base
