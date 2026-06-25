@@ -1,0 +1,85 @@
+
+<h1 style=" text-align: center; font-size: 3em; font-family: 'Georgia', serif; color: #2c3e50; margin: 0.5em 0; padding: 10px 0; border-top: 4px solid #3498db; border-bottom: 4px solid #3498db; text-transform: uppercase; letter-spacing: 3px;">IBM AI Course Introduction</h1>
+
+## 课程列表
+
+IBM AI工程师专业证书课程列表：
+
+**[IBM AI Engineering Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer#courses)**
+
+![[ibm-ai-engineer-course-outline.png]]
+
+
+1. [Machine Learning with Python](https://www.coursera.org/learn/machine-learning-with-python?specialization=ai-engineer)
+	- 课程笔记：[[IBM-1-Machine Learning with Python]]
+	- 核心知识：
+		- [[2.1 机器学习概述]]
+		- [[2.2 机器学习的分类]]
+		- [[2.5 回归和分类]]
+		- [[2.6 聚类和降维]]
+		- [[2.x 模型评估与调优]]
+	- 内容总结：
+		- 机器学习生命周期阶段
+		- 机器学习分类和模型
+		- 偏差-方差权衡以优化模型性能。
+		- 使用指标、交叉验证和超参数调整来评估模型性能
+	
+2. [DL and NN With Keras](https://www.coursera.org/learn/introduction-to-deep-learning-with-keras?specialization=ai-engineer)
+	- 课程笔记：[[IBM-2-DL and NN with Keras]]
+	- 核心知识：
+		- [[3.1 神经元和神经网络]]
+	- 内容总结：
+		- [[3.2 深度学习概述|深度学习基础]]
+		- [[3.1 神经元和神经网络|神经元和神经网络]]
+		- 深度学习模型
+			- [[3.3 卷积神经网络 CNN]]
+			- [[3.4 循环神经网络 RNN]]
+			- [[3.5 Transformer 架构]]
+			- [[3.6 Autoencoder, AE]]
+3. [Deep Learning with Keras and Tensorflow](https://www.coursera.org/learn/building-deep-learning-models-with-tensorflow?specialization=ai-engineer)
+	- 课堂笔记：[[IBM-3-DL with Keras and Tensorflow]]
+	- 内容总结：
+		- [[3.x 模型优化#数据增强 Data Augmentation|数据增强]]
+		- [[3.x 模型优化#迁移学习|迁移学习]]
+		- Transpose Convolution
+		- Transformers for text generation
+		- [[3.6 Autoencoder, AE|Autoencoders]]
+		- [[3.7 自监督学习#融合模型 Diffusion Models|Diffusion models]]
+		- [[3.7 自监督学习#生成对抗网络 GANS|GANs]]
+		- [[Keras高阶用法#**二、自定义训练流程：掌控每一步**|Custom Training Loops]]
+		- [[Keras高阶用法#**三、设计自定义 Layer 与模型组件**|Custom Layers and Models]]
+		- 超参数调优
+		- Q-Learning
+		- Deep Q-Network
+4. [Neural Network and PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch/)
+	- 课程笔记：[[IBM-4-Neural Network and PyTorch]]
+	- 内容总结：
+		- PyTorch张量操作
+		- 训练回归模型
+		- 应用逻辑回归解决分类问题
+		- 梯度下降
+5. [Deep Learning with PyTorch](https://www.coursera.org/learn/advanced-deep-learning-with-pytorch?specialization=ai-engineer)
+6. [AI Capstone Project with Deep Learning](https://www.coursera.org/learn/ai-deep-learning-capstone?specialization=ai-engineerr)
+7. [Generative AI and LLMs: Architecture and Data Preparation](https://www.coursera.org/learn/generative-ai-llm-architecture-data-preparation?specialization=ai-engineer)
+8. [Gen AI Model Foundations for NLP & Language Understanding](https://www.coursera.org/learn/gen-ai-foundational-models-for-nlp-and-language-understanding?specialization=ai-engineer)
+
+9. [Generative AI Language Modeling with Transformers](https://www.coursera.org/learn/generative-ai-language-modeling-with-transformers?specialization=ai-engineer)
+
+10. [Generative AI Engineering and Fine-Tuning Transformers](https://www.coursera.org/learn/generative-ai-engineering-and-fine-tuning-transformers?specialization=ai-engineer)
+
+11. [Generative AI Advance Fine-Tuning for LLMs](https://www.coursera.org/learn/generative-ai-advanced-fine-tuning-for-llms?specialization=ai-engineer)
+
+12. [Fundamentals of Building AI Agents using RAG and LangChain](https://www.coursera.org/learn/fundamentals-of-ai-agents-using-rag-and-langchain?specialization=ai-engineer)
+
+13. [Project: Generative AI with RAG and LangChain](https://www.coursera.org/learn/project-generative-ai-applications-with-rag-and-langchain?specialization=ai-engineer)
+
+> 注：以上所有内容，已被整理到各级目录知识中。IBM-n开头的文档只摘录每节课的Summary。
+
+## 参考资料
+
+- [【2025版】这绝对是B站最好的Pytorch天花板教程，从入门到实战，通俗易懂，一套解决Pytorch框架所有问题！深度学习/人工智能/神经网络_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1JLPaeoE4L/?spm_id_from=333.337.search-card.all.click&vd_source=d2c6cad4e8b48a4a5ab3df7cb838685b)
+- [PyTorch documentation — PyTorch 2.6 documentation](https://pytorch.org/docs/stable/index.html)
+
+
+
+

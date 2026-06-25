@@ -1,56 +1,61 @@
-name: Deploy to GitHub Pages
+name: Deploy Quartz site to GitHub Pages
 
 on:
   push:
     branches:
-      - obsidian
+      - quartz
+
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: main  # 先检出main分支
-          fetch-depth: 0  # 完整克隆以便进行分支操作
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+          fetch-depth: 0 # Fetch all history for git info
+      - uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
+          node-version: 22
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Cache Quartz plugins
+        uses: actions/cache@v4
+        with:
+          path: .quartz/plugins
+          key: ${{ runner.os }}-plugins-${{ hashFiles('quartz.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-plugins-
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Quartz plugins
+        run: npx quartz plugin install
+      - name: Build Quartz
+        run: npx quartz build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-      - name: Merge obsidian branch into main
-        env:
-          COMMIT_MSG: ${{ github.event.head_commit.message }}
-        run: |
-          # 确保我们有最新的obsidian分支
-          git fetch origin obsidian
-
-          # 合并obsidian到main，保留obsidian的内容
-          git merge origin/obsidian -X theirs --allow-unrelated-histories -m "Merge obsidian branch into main: $COMMIT_MSG"
-
-      - name: Run Python script for formatting
-        run: |
-          python .github/myhooks/deploy_vault_format.py
-
-      - name: Commit formatting changes
-        env:
-          COMMIT_MSG: ${{ github.event.head_commit.message }}
-        run: |
-          git add .
-          git commit -m "Format vault content: $COMMIT_MSG" || echo "No changes to commit"
-          
-      - name: Push changes to main
-        run: |
-          git push origin main
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
