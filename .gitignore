@@ -9,7 +9,7 @@ __pycache__/
 
 .jupyter
 
-.obsidian/plugins/copilot/data.json
+AI-Knowledge-Base/.obsidian/plugins/copilot/data.json
 /test.md
 
 ./*.base

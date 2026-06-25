@@ -43,7 +43,7 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
       - name: Build Quartz
-        run: npx quartz build
+        run: npx quartz build -d AI-Knowledge-Base
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,3 +1,7 @@
+---
+title: 知识库首页
+description: Jimmy's AI 学习手册 —— 知识大纲与说明
+---
 
 ![AI-HBook-BG@0.5x.webp](./images/AI-HBook-BG@0.5x.webp)
 
@@ -85,10 +89,6 @@
 + 《<font style="color:tomato;">The Document is All You Need！一站式LLM底层技术原理入门指南</font>》by 陈敏凯 
 	+ 特点：非常适合小白快速入门，搞懂基本原理
 + ==Coursera AI 相关课程==
-	+ [[IBM-0-Course Introduction and Study Plan|IBM全套AI工程师课程]] 
-		+ 特点：
-			+ 适合普通程序构建完整AI知识体系， 课程非常全面，Jupyter小项目多
-			+ 具有一定的实用性和职业导向性。
 	+ [劳伦斯的AI课程](https://www.coursera.org/instructor/lmoroney)
 		+ 特点：课程互动性强、实践性高，Laurence讲师带做经典入门DNN案例
 	+ [吴恩达的AI课程](https://www.coursera.org/instructor/andrewng)
