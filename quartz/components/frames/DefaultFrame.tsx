@@ -24,6 +24,17 @@ export const DefaultFrame: PageFrame = {
     return (
       <>
         <div class="left sidebar">
+          <button
+            type="button"
+            class="sidebar-toggle"
+            data-sidebar="left"
+            aria-expanded="true"
+            aria-label="折叠侧边栏"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
           {left.map((BodyComponent) => (
             <BodyComponent {...componentData} />
           ))}
@@ -50,6 +61,17 @@ export const DefaultFrame: PageFrame = {
           </div>
         </div>
         <div class="right sidebar">
+          <button
+            type="button"
+            class="sidebar-toggle"
+            data-sidebar="right"
+            aria-expanded="true"
+            aria-label="折叠侧边栏"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
           {right.map((BodyComponent) => (
             <BodyComponent {...componentData} />
           ))}

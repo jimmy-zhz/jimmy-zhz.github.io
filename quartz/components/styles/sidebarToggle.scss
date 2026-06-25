@@ -1,0 +1,177 @@
+@use "../../styles/variables.scss" as *;
+
+$collapsedWidth: 0.625rem;
+
+// 折叠按钮固定在 top: 1.5rem，但 .sidebar 的基础 padding-top 用的是共享变量
+// $topSpacing（6rem），导致按钮上方留白（1.5rem）远小于按钮到内容顶部的留白
+// （6rem - 1.5rem - 按钮高度）。这里单独把侧边栏的 padding-top 收紧，让按钮
+// 上下留白基本相等，同时不改 $topSpacing 本身（它还被主内容区头部间距复用）。
+// 左侧边栏内容额外收紧一点左边距，让标题/搜索框/目录整体往左挪。
+@media all and ($desktop) {
+  .sidebar.left,
+  .sidebar.right {
+    // #quartz-body .sidebar 的基础 padding 用 ID 选择器，优先级高于这里的
+    // class 选择器，需要 !important 才能覆盖。
+    padding-top: 4.75rem !important;
+  }
+
+  .sidebar.left {
+    padding-left: 1.25rem !important;
+  }
+
+  // 右侧栏：目录固定占比，撑满剩余空间；关系图谱/反向链接默认折叠，
+  // 缩成标题条沉到底部。
+  .sidebar.right {
+    .toc {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .toc-content {
+      flex: 1;
+      overflow-y: auto;
+    }
+    // 官方折叠机制靠把 .toc 压扁到 1.4rem + overflow:hidden 来裁掉内容，
+    // 但标题按钮本身比 1.4rem 高，会被一起裁切（见下方 :has 规则的说明）。
+    // 这里改成直接隐藏内容区，折叠态下标题永远完整可见。
+    .toc-content.collapsed {
+      display: none;
+    }
+
+    .graph,
+    .backlinks {
+      flex: 0 0 auto;
+      // backlinks 组件自带一个上 4px / 左右 12px / 下 32px 的内边距，
+      // 和 graph/toc 不一致，导致标题缩进对不齐，这里统一清零。
+      padding: 0 !important;
+    }
+
+    // 目录折叠时 (.toc:has(.toc-header.collapsed)) 官方样式会把 .toc 压到
+    // 1.4rem 高，但上面我们又把 .toc 设成了 flex:1 撑满剩余空间，两者打架时
+    // 容器高度被压扁，标题按钮本身却没跟着缩小，导致"目录"文字被裁切只剩
+    // 几道横线。折叠态下让 .toc 完全交还原生的自然高度，不再抢占剩余空间。
+    .toc:has(.toc-header.collapsed) {
+      flex: 0 0 auto !important;
+      min-height: auto;
+      overflow: visible;
+    }
+
+    .graph > h3,
+    .backlinks > h3 {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+
+      &::after {
+        content: "▾";
+        font-size: 0.7rem;
+        color: var(--gray);
+        transition: transform 0.2s ease;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .graph.is-collapsed > h3::after,
+    .backlinks.is-collapsed > h3::after {
+      transform: rotate(-90deg);
+    }
+
+    .graph.is-collapsed > *:not(h3),
+    .backlinks.is-collapsed > *:not(h3) {
+      display: none;
+    }
+  }
+}
+
+.sidebar-toggle {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--gray);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--secondary);
+    background: var(--lightgray);
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  @media all and ($desktop) {
+    display: flex;
+  }
+}
+
+.sidebar.left .sidebar-toggle {
+  left: 1rem;
+}
+
+.sidebar.right .sidebar-toggle {
+  right: 1rem;
+}
+
+// Both buttons share a single chevron-left glyph; the right one is mirrored
+// so it points outward by default, and both flip when their sidebar collapses.
+.sidebar-toggle[data-sidebar="right"] svg {
+  transform: rotate(180deg);
+}
+
+.sidebar-toggle.is-collapsed svg {
+  transform: rotate(180deg);
+}
+
+.sidebar-toggle[data-sidebar="right"].is-collapsed svg {
+  transform: rotate(0deg);
+}
+
+@media all and ($desktop) {
+  html[data-sidebar-left="collapsed"] #quartz-body {
+    grid-template-columns: #{$collapsedWidth} auto #{$sidePanelWidth};
+  }
+
+  html[data-sidebar-right="collapsed"] #quartz-body {
+    grid-template-columns: #{$sidePanelWidth} auto #{$collapsedWidth};
+  }
+
+  html[data-sidebar-left="collapsed"][data-sidebar-right="collapsed"] #quartz-body {
+    grid-template-columns: #{$collapsedWidth} auto #{$collapsedWidth};
+  }
+
+  html[data-sidebar-left="collapsed"] .sidebar.left,
+  html[data-sidebar-right="collapsed"] .sidebar.right {
+    // #quartz-body .sidebar's base padding uses an ID selector, which beats
+    // this class-based override on specificity alone — !important is required.
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  html[data-sidebar-left="collapsed"] .sidebar.left > *:not(.sidebar-toggle),
+  html[data-sidebar-right="collapsed"] .sidebar.right > *:not(.sidebar-toggle) {
+    display: none !important;
+  }
+
+  // The collapsed track is narrower than the button itself, so center the
+  // button on the track instead of inset-ing it from an edge.
+  html[data-sidebar-left="collapsed"] .sidebar.left .sidebar-toggle,
+  html[data-sidebar-right="collapsed"] .sidebar.right .sidebar-toggle {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}

@@ -6,9 +6,14 @@ import { QuartzEmitterPlugin } from "../types"
 import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
+// @ts-ignore
+import sidebarToggleScript from "../../components/scripts/sidebarToggle.inline"
+// @ts-ignore
+import sidebarSectionToggleScript from "../../components/scripts/sidebarSectionToggle.inline"
 import baseStyles from "../../styles/base.scss"
 import customStyles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
+import sidebarToggleStyle from "../../components/styles/sidebarToggle.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
 import { normalizeResource } from "../../util/resources"
@@ -89,6 +94,11 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     componentResources.afterDOMLoaded.push(popoverScript)
     componentResources.css.push(popoverStyle)
   }
+
+  // sidebar collapse toggles
+  componentResources.beforeDOMLoaded.push(sidebarToggleScript)
+  componentResources.beforeDOMLoaded.push(sidebarSectionToggleScript)
+  componentResources.css.push(sidebarToggleStyle)
 
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
