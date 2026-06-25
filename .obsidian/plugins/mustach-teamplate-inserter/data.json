@@ -3,17 +3,18 @@
     {
       "id": "default",
       "name": "Styled H1",
-      "content": "<h1 style=\" text-align: center; font-size: 3em; font-family: 'Georgia', serif; color: #2c3e50; margin: 0.5em 0; padding: 10px 0; border-top: 4px solid #3498db; border-bottom: 4px solid #3498db; text-transform: uppercase; letter-spacing: 3px;\">{{selectedText}}</h1>",
+      "content": "<h1 class=\"title-top-head\">{{selectedText}}</h1>",
       "params": [
         "selectedText"
       ],
       "defaultValues": {
         "selectedText": "Welcome to Mustache Template."
-      }
+      },
+      "isCommand": false
     },
     {
       "id": "1746685230032",
-      "name": "YellowBgText",
+      "name": "Tag: YellowBgText",
       "content": "<font style=\"background-color: #FFFACD; color:{{color}}; padding: 4px; border-radius: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); font-weight: bold;\">{{selectedText}}</font>",
       "params": [
         "color",
@@ -27,7 +28,7 @@
     },
     {
       "id": "1746685411514",
-      "name": "RedBgText",
+      "name": "Tag: RedBgText",
       "content": "<font style=\"background-color:tomato; color:white; padding:4px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);font-weight: bold;\">{{selectedText}}</font>",
       "params": [
         "selectedText"
@@ -35,11 +36,11 @@
       "defaultValues": {
         "selectedText": ""
       },
-      "isCommand": true
+      "isCommand": false
     },
     {
       "id": "1746849248934",
-      "name": "CouseraURL",
+      "name": "Tag: CouseraURL",
       "content": "<a href=\"{{selectedText}}\" target=\"_parent\" style=\"display: flex; align-items: center; height: 100%;\"><img src=\"https://raw.githubusercontent.com/jimmy-zhz/colab-playground/refs/heads/main/resources/icon/coursera.svg\" alt=\"Open In Coursera\" style=\"height: 100%; object-fit: contain;\"><span style=\"height: 100%; display: flex; align-items: center; padding-left: 10px;\">{{courseName}}</span></a>",
       "params": [
         "selectedText",
@@ -53,7 +54,7 @@
     },
     {
       "id": "1747649108295",
-      "name": "快速上手",
+      "name": "Title: 例子 快速上手",
       "content": "<font style=\"background:#F6E1AC;color:#664900\">🌰 快速上手 </font>[ ✍️ {{title}}]({{link}})",
       "params": [
         "title",
@@ -62,6 +63,166 @@
       "defaultValues": {
         "link": "",
         "title": ""
+      },
+      "isCommand": true
+    },
+    {
+      "id": "1779808025484",
+      "name": "Title4: 学术论文标题",
+      "content": "<div class='title-line-space'>\n<span class=\"title4-academic\">\n➢ {{selectedText}}\n</span>\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779808027293",
+      "name": "Title3 : Obsidian Purple",
+      "content": "<div class='title-line-space'>\n<div class=\"title3-obsidian-purple\">\n{{selectedText}}\n</div></div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": true
+    },
+    {
+      "id": "1779808029837",
+      "name": "Title: Notion卡片风",
+      "content": "<div style=\"\ndisplay:inline-flex;\nalign-items:center;\ngap:8px;\npadding:6px 14px;\nbackground:#f3f4f6;\nborder-radius:10px;\nfont-weight:700;\nfont-size:15px;\ncolor:#111827;\nborder:1px solid #e5e7eb;\n\">\n📘 {{selectedText}}\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779808030008",
+      "name": "Title4: 黄色高亮标签-正文",
+      "content": "<div class='title-line-space'>\n<span class=\"title4-yellow\" style=\"font-size: {{fontsize}}px\">\n{{selectedText}}\n</span>\n</div>",
+      "params": [
+        "fontsize",
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": "",
+        "fontsize": "15"
+      },
+      "isCommand": true
+    },
+    {
+      "id": "1779808030187",
+      "name": "Card: 卡片知识块",
+      "content": "\n<div class=\"card-stats-card\">\n\n<div class=\"card-stats-title\">\n\n<div class=\"card-stats-icon\">\n📊\n</div>\n\n<div style=\"\nfont-size:18px;\nfont-weight:800;\ncolor:white;\n\">\n{{selectedText}}\n</div>\n\n</div>\n\n<div style=\"\ncolor:#cbd5e1;\nline-height:1.8;\n\">\n示例知识内容\n</div>\n\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": true
+    },
+    {
+      "id": "1779808030379",
+      "name": "Callout: 成功/关键结论",
+      "content": "<div style=\"\npadding:14px 16px;\nborder-radius:12px;\nbackground:#dcfce7;\nborder-left:6px solid #16a34a;\ncolor:#14532d;\nmargin:10px 0;\n\">\n<div style=\"font-weight:700;margin-bottom:6px;\">\n✅ 结论\n</div>\n<div>\n{{selectedText}}\n</div>\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779808703497",
+      "name": "Callout: Error易错",
+      "content": "<div style=\"\npadding:14px 16px;\nborder-radius:12px;\nbackground:#fee2e2;\nborder-left:6px solid #dc2626;\ncolor:#7f1d1d;\nmargin:10px 0;\nbox-shadow:0 2px 8px rgba(220,38,38,0.12);\n\">\n<div style=\"font-weight:800;margin-bottom:6px;\">\n🚨 考试重点\n</div>\n<div>\n{{selectedText}}\n</div>\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779808703683",
+      "name": "Callout: Normal",
+      "content": "<div style=\"\npadding:14px 16px;\nborder-radius:12px;\nbackground:#e0f2fe;\nborder-left:6px solid #0284c7;\ncolor:#0f172a;\nmargin:10px 0;\n\">\n<div style=\"font-weight:700;font-size:16px;margin-bottom:6px;\">\nℹ️ 核心概念\n</div>\n<div>\n{{selectedText}}\n</div>\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": true
+    },
+    {
+      "id": "1779808703846",
+      "name": "Callout: Warning",
+      "content": "<div style=\"callout-warning\">\n<div style=\"font-weight:700;margin-bottom:6px;\">\n⚠️ 常见误区\n</div>\n<div>\n{{selectedText}}\n</div>\n</div>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779810741035",
+      "name": "Title5: left side bar quote",
+      "content": "<span class=\"title5-left-side-bar\" style=\"font-size: {{fontsize}}px\">\n{{selectedText}}\n</span>",
+      "params": [
+        "fontsize",
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": "",
+        "fontsize": "14"
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779810741332",
+      "name": "Title5: 外框Boader",
+      "content": "<span class=\"title5-thin-boarder\">\n{{selectedText}}\n</span>\n",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779811020786",
+      "name": "Title6:下划线",
+      "content": "<span class=\"title6-underscore\">{{selectedText}}</span>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
+      },
+      "isCommand": false
+    },
+    {
+      "id": "1779811116198",
+      "name": "Title6: squre boarder",
+      "content": "<span class=\"title6-square-boarder\">{{selectedText}}</span>",
+      "params": [
+        "selectedText"
+      ],
+      "defaultValues": {
+        "selectedText": ""
       },
       "isCommand": false
     }

@@ -5,7 +5,7 @@
   * [2-传统机器学习](2.1%20机器学习概述.md)
   * [3-深度学习](3-DeepLearning/3.1%20%E7%A5%9E%E7%BB%8F%E5%85%83%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.md)
   * [7-RAG搜索增强](7-RAG/%E7%8E%B0%E4%BB%A3%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF.md)
-  * [9-推荐系统](9-RecommendSystem/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.md)
+  * [9-推荐系统](推荐系统.md)
   * [10-AI全栈](10-AI-Full-Stack/Github%E7%83%AD%E7%82%B9%E9%A1%B9%E7%9B%AE.md)
   * [11-上手项目](11-Side-Project/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%20AI%20side%20project%EF%BC%9F.md)
   * [IBM全套AI工程师课程(Coursera)](IBM-AI-Engineer-Course/IBM-0-Course%20Introduction%20and%20Study%20Plan.md)

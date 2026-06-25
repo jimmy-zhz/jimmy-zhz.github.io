@@ -1,5 +1,9 @@
 {
   "baseFontSize": 14,
   "cssTheme": "",
-  "accentColor": "#42c6ff"
+  "accentColor": "#42c6ff",
+  "enabledCssSnippets": [
+    "common",
+    "notion-gallery"
+  ]
 }

@@ -26,7 +26,7 @@
 * 7-RAG搜索增强
   * [现代搜索技术](7-RAG/%E7%8E%B0%E4%BB%A3%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF.md)
 * 9-推荐系统
-  * [推荐系统](9-RecommendSystem/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.md)
+  * [推荐系统](推荐系统.md)
 * 10-AI全栈
   * [Github热点项目](10-AI-Full-Stack/Github%E7%83%AD%E7%82%B9%E9%A1%B9%E7%9B%AE.md)
   * [PS+ComfyUI PS智能体](10-AI-Full-Stack/PS%2BComfyUI%20PS%E6%99%BA%E8%83%BD%E4%BD%93.md)

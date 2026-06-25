@@ -6,5 +6,10 @@
   "folder-note-plugin",
   "obsidian-git",
   "terminal",
-  "copilot"
+  "dataview",
+  "metadata-menu",
+  "obsidian-style-settings",
+  "templater-obsidian",
+  "obsidian-kanban",
+  "obsidian-mindmap-nextgen"
 ]

@@ -1,0 +1,104 @@
+.title-line-space {
+    margin: 2.5em 0;
+}
+
+.title-top-head {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    margin: 0.5em 0;
+    padding: 10px 0;
+    border-top: 4px solid #3498db;
+    border-bottom: 4px solid #3498db;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.card-stats-card {
+    background: linear-gradient(180deg, #1e293b, #0f172a);
+    border-radius: 18px;
+    padding: 18px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    color: #cbd5e1;
+    margin: 1em 0;
+}
+
+.card-stats-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.card-stats-icon {
+    margin-right: 8px;
+}
+
+.title4-academic {
+    padding: 4px 10px;
+    border: 1.5px solid #3b82f6;
+    border-radius: 999px;
+    color: #2563eb;
+    font-weight: 700;
+    background: rgba(59, 130, 246, 0.08);
+    font-size: 15px;
+}
+
+.title3-obsidian-purple {
+    display: inline-block;
+    padding: 5px 12px;
+    border-left: 5px solid #a855f7;
+    background: #2a2139;
+    color: #eadcff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.title4-yellow {
+    background: linear-gradient(transparent 60%, #fde68a 60%);
+    font-weight: 800;
+    padding: 2px 4px;
+    color: #1f2937;
+}
+
+.callout-warning {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: #fef3c7;
+    border-left: 6px solid #f59e0b;
+    color: #78350f;
+    margin: 10px 0;
+
+}
+
+.title5-left-side-bar {
+    font-weight: 800;
+    padding-left: 10px;
+    border-left: 4px solid currentColor;
+    display: inline-block;
+}
+
+.title5-thin-boarder {
+    display: inline-block;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+}
+
+.title6-underscore {
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+.title6-square-boarder {
+    font-weight: 800;
+    border: 1px solid currentColor;
+    padding: 1px 6px;
+    display: inline-block;
+}

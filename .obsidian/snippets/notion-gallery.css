@@ -1,0 +1,31 @@
+.notion-card {
+    display: inline-block;
+    width: 260px;
+    margin: 10px;
+    padding: 14px;
+
+    border-radius: 14px;
+    border: 1px solid #334155;
+    background: linear-gradient(180deg,#0f172a,#111827);
+
+    color: white;
+
+    transition: all 0.15s ease;
+}
+
+.notion-card:hover {
+    transform: translateY(-3px);
+    border-color: #64748b;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.notion-card .title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.notion-card .meta {
+    font-size: 12px;
+    opacity: 0.6;
+}
