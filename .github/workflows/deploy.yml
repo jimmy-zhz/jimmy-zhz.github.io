@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - obsidian
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -28,21 +31,25 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
       - name: Merge obsidian branch into main
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           # 确保我们有最新的obsidian分支
           git fetch origin obsidian
-          
+
           # 合并obsidian到main，保留obsidian的内容
-          git merge origin/obsidian -X theirs --allow-unrelated-histories -m "Merge obsidian branch into main: ${{ github.event.head_commit.message }}"
+          git merge origin/obsidian -X theirs --allow-unrelated-histories -m "Merge obsidian branch into main: $COMMIT_MSG"
 
       - name: Run Python script for formatting
         run: |
           python .github/myhooks/deploy_vault_format.py
 
       - name: Commit formatting changes
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           git add .
-          git commit -m "Format vault content: ${{ github.event.head_commit.message }}" || echo "No changes to commit"
+          git commit -m "Format vault content: $COMMIT_MSG" || echo "No changes to commit"
           
       - name: Push changes to main
         run: |
